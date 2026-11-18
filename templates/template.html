@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube Downloader</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+
+            <div class="logo">YT<span>D</span></div>
+
+            <div>
+                <h1>YOUTUBE DOWNLOADER</h1>
+                <p>Download videos and playlists</p>
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <!-- URL -->
+
+            <section class="panel">
+
+                <label>YouTube URL</label>
+
+                <input
+                    id="url"
+                    type="url"
+                    placeholder="Paste a YouTube video or playlist URL..."
+                >
+
+            </section>
+
+
+            <!-- SETTINGS -->
+
+            <section class="panel">
+
+                <div class="settings">
+
+                    <div>
+
+                        <label>DOWNLOAD TYPE</label>
+
+                        <select id="type">
+
+                            <option>Single Video</option>
+                            <option>Playlist</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label>FORMAT</label>
+
+                        <select id="format">
+
+                            <option>MP4</option>
+                            <option>MP3</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label id="quality-label">VIDEO QUALITY</label>
+
+                        <select id="quality">
+
+                            <option>Best</option>
+                            <option>1080p</option>
+                            <option>720p</option>
+                            <option>480p</option>
+                            <option>360p</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <button id="download-button" class="primary">
+                    DOWNLOAD
+                </button>
+
+                <button id="cancel-button" class="danger" disabled>
+                    CANCEL
+                </button>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <section class="panel progress-panel">
+
+                <div class="status-row">
+
+                    <span id="status">Ready</span>
+
+                    <span id="percentage">0%</span>
+
+                </div>
+
+                <div class="progress-background">
+
+                    <div id="progress-bar"></div>
+
+                </div>
+
+                <p id="current-video">Waiting for a download...</p>
+
+                <p id="progress-info">No downloads yet.</p>
+
+            </section>
+
+
+            <!-- RESULTS -->
+
+            <section class="panel results-panel">
+
+                <h2>DOWNLOADS</h2>
+
+                <div id="results">
+
+                    <p class="empty">
+                        Your finished downloads will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- LOG -->
+
+            <section class="panel">
+
+                <h2>DOWNLOAD LOG</h2>
+
+                <div id="log">
+
+                    <p>Downloader ready.</p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            <span>YTD Downloader</span>
+
+            <span>Temporary download storage</span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
