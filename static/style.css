@@ -1,1 +1,281 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    background: #101014;
+    color: #eeeeee;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    max-width: 950px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    background: #8547b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #e3b7ff;
+}
+
+h1 {
+    margin: 0;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #c77dff;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #999;
+    font-size: 14px;
+}
+
+.panel {
+    background: #1a1a22;
+    border: 1px solid #292936;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #aaaaaa;
+    margin-bottom: 10px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 43px;
+    padding: 0 12px;
+    border-radius: 7px;
+    border: 1px solid #63358c;
+    background: #111116;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: #c77dff;
+}
+
+.settings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    height: 47px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.primary {
+    background: #8547b5;
+}
+
+.primary:hover:not(:disabled) {
+    background: #a45bd8;
+}
+
+.danger {
+    background: #742d36;
+}
+
+.danger:hover:not(:disabled) {
+    background: #a13e4b;
+}
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: bold;
+    color: #c77dff;
+}
+
+.progress-background {
+    height: 12px;
+    background: #101014;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #a45bd8;
+    transition: width 0.2s;
+}
+
+#current-video,
+#progress-info {
+    font-size: 12px;
+    color: #999;
+    overflow-wrap: anywhere;
+}
+
+h2 {
+    font-size: 13px;
+    color: #aaaaaa;
+    margin: 0 0 15px;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.empty {
+    color: #777;
+    font-size: 13px;
+}
+
+.file-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 13px;
+    background: #111116;
+    border: 1px solid #33303c;
+    border-radius: 8px;
+}
+
+.file-name {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.file-size {
+    font-size: 11px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.file-download {
+    background: #63358c;
+    padding: 0 15px;
+    height: 36px;
+    white-space: nowrap;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.file-download:hover {
+    background: #8547b5;
+}
+
+.zip-button {
+    background: #8547b5;
+    text-align: center;
+    padding: 14px;
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#log {
+    height: 130px;
+    overflow-y: auto;
+    background: #101014;
+    padding: 12px;
+    border-radius: 7px;
+    font-family: Consolas, monospace;
+    font-size: 11px;
+    color: #aaaaaa;
+}
+
+#log p {
+    margin: 0 0 7px;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 11px;
+    padding: 15px 3px;
+}
+
+@media (max-width: 650px) {
+
+    .settings {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 19px;
+    }
+
+    .file-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
